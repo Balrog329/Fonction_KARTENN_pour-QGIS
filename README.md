@@ -1,5 +1,5 @@
 👋 Salut à tous,
-Bienvenue, sur ce dépôt GitHub, vous trouverez plusieurs fonctions Python issue de mon application KARTENN, et pouvant être exécutées indépendamment dans la console de QGIS.
+Bienvenue, sur ce dépôt GitHub, vous trouverez plusieurs fonctions Python issue de ma petite application KARTENN. Les fonctions pouvent être exécutées indépendamment dans la console de QGIS.
 J’alimente ce dépôt au fil du développement de Kartenn, ou selon les besoins rencontrés au bureau pour des tâches quotidiennes.
 Promis, je fais de mon mieux pour bien annoter le code 😉
 
