@@ -6,6 +6,8 @@ from PyQt5.QtCore import QVariant
 #Supprime les 0 dans la couche SSPF avant les numéro de sous parcelles 
 #et met a jour le champ PARFOR.
 
+# Attention ca réinitialise la position des étiquettes
+
 
 #crédit : Alexandre Le Bars
 
