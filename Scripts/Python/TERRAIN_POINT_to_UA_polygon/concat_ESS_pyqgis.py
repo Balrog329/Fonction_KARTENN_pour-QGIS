@@ -7,6 +7,7 @@ from PyQt5.QtCore import QVariant
 #et écrit le résultat dans target_col (PLT_ESS).
 #- Si % < 20, l'essence est mise entre parenthèses.
 #- Si toutes les essences sont nulles, PLT_ESS reste vide.
+# Enfin, la collone ESS_REP est créée avec la répartitions des essences concaténées
 
 #crédit : Alexandre Le Bars
 
@@ -23,7 +24,7 @@ print("Editable :", layer.isEditable())
 print("Provider :", layer.providerType())
 print("ReadOnly :", layer.readOnly())
 
-def build_PLT_ESS(layer, ess_cols=["Essence_1","Essence_2","Essence_3"], pct_cols=["%_ESS1","%_ESS2","%_ESS3"], target_col="PLT_ESS_F"):
+def build_PLT_ESS(layer, ess_cols=["Essence_1","Essence_2","Essence_3"], pct_cols=["%_ESS1","%_ESS2","%_ESS3"], target_col="PLT_ESS_F",ess_rep="ESS_REP"):
 
 
     # Vérifier que la colonne cible existe, sinon la créer
@@ -60,10 +61,10 @@ def build_PLT_ESS(layer, ess_cols=["Essence_1","Essence_2","Essence_3"], pct_col
             feat[target_col] = "-".join(ess_list)
         else:
             feat[target_col] = None
-        layer.updateFeature(feat)
 
+        layer.updateFeature(feat)
     layer.commitChanges()
 
     print(f"Colonne {target_col} mise à jour.")
 
-build_PLT_ESS(layer, ess_cols=["Essence_1","Essence_2","Essence_3"], pct_cols=["%_ESS1","%_ESS2","%_ESS3"], target_col="PLT_ESS_F")
+build_PLT_ESS(layer, ess_cols=["Essence_1","Essence_2","Essence_3"], pct_cols=["%_ESS1","%_ESS2","%_ESS3"], target_col="PLT_ESS_F",ess_rep="ESS_REP")
