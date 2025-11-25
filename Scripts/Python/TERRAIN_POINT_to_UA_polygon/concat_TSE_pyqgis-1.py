@@ -57,7 +57,23 @@ def build_PLT_TSE(layer, ess_cols=["TSE_ESS1","TSE_ESS2","TSE_ESS3"], pct_cols=[
         dens = str(feat[dens_col]) if feat[dens_col] is not None else ""
         expl = str(feat[exp_col]) if feat[exp_col] is not None else ""
 
-        if dominant : feat[target_col] =f"{dominant}{dens}{expl}"
+        if dens == "pd":
+            densi = "3"
+        elif dens == "md":
+            densi = "2"
+        elif dens == "d":
+            densi = "1"
+        else : densi =""
+        
+        if expl == "ne":
+            exploi = "c"
+        elif expl =="ie":
+            exploi = "b"
+        elif expl == "e":
+            exploi = "a"
+        else : exploi = ""
+
+        if dominant : feat[target_col] =f"{dominant}-T{densi}{exploi}"
         else : feat [target_col] = None
 
         layer.updateFeature(feat)
