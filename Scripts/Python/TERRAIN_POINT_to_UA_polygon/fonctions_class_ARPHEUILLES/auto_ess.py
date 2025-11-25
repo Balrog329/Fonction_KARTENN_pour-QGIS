@@ -62,8 +62,12 @@ def classify_PLT_ESS():
 
             if pct_val is None or pct_val == 0:
                 continue
-
-            if pct_val is not None and pct_val < 20:
+            #à noter si moins de 10% pas essence
+            
+            # avec = 10 à 30% de G
+            if pct_val is not None and pct_val <10 :
+                ess_list.append("")
+            elif pct_val is not None and pct_val < 30 :
                 ess_list.append(f"({ess})")
             else:
                 ess_list.append(str(ess))
