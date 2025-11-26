@@ -3,7 +3,7 @@ from qgis.utils import iface
 from PyQt5.QtCore import QVariant
 
 
-#La fonction Build_PLT_STR : 
+#La fonction Build_PLT_TSE : 
 #Concatène les colonnes TSE_ESS_1, TSE_ESS_2, TSE_ESS_3 et prend la dominante selon le %
 #et écrit le résultat dans target_col (PLT_STR).
 #- Si toutes les essences sont nulles, PLT_STR reste vide.
