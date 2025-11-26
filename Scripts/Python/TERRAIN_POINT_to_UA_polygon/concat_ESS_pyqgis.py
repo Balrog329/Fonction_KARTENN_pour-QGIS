@@ -1,6 +1,3 @@
-from qgis.core import QgsVectorLayer, QgsField, QgsFeature, edit
-from qgis.utils import iface
-from PyQt5.QtCore import QVariant
 
 #La fonction Build_PLT_ESS : 
 #Concatène les colonnes ESS_1, ESS_2, ESS_3 selon leurs pourcentages
@@ -15,7 +12,14 @@ from PyQt5.QtCore import QVariant
 #Kartenn !
 
 # ! Pour commencer, selectionner votre couche 
-# terrain_point dans le panneau de couche !
+# terrain_point dans le panneau de couche,
+# puis cliquez sur le petit play vert en haut !
+
+
+
+from qgis.core import QgsVectorLayer, QgsField, QgsFeature, edit
+from qgis.utils import iface
+from PyQt5.QtCore import QVariant
 
 layer = iface.activeLayer()
 

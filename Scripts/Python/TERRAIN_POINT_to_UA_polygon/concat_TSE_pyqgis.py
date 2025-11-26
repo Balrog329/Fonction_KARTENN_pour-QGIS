@@ -1,7 +1,3 @@
-from qgis.core import QgsField, edit
-from qgis.utils import iface
-from PyQt5.QtCore import QVariant
-
 
 #La fonction Build_PLT_TSE : 
 #Concatène les colonnes TSE_ESS_1, TSE_ESS_2, TSE_ESS_3 et prend la dominante selon le %
@@ -14,7 +10,15 @@ from PyQt5.QtCore import QVariant
 #Kartenn !
 
 # ! Pour commencer, selectionner votre couche 
-# terrain_point dans le panneau de couche !
+# terrain_point dans le panneau de couche,
+# # puis cliquez sur le petit play vert en haut !
+
+
+
+
+from qgis.core import QgsField, edit
+from qgis.utils import iface
+from PyQt5.QtCore import QVariant
 
 
 layer = iface.activeLayer()
